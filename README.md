@@ -22,8 +22,7 @@ BioMaster-Enterprise/
 
 The recommended approach is using Docker to avoid environment conflicts.
 
-git clone https://github.com/username/BioMaster-Enterprise.git
-cd BioMaster-Enterprise
+git clone https://github.com/Nour10798/BioMaster-Enterprise.gitcd BioMaster-Enterprise
 docker-compose up --build -d
 
 The API server will be available at http://localhost:8000.
@@ -36,9 +35,7 @@ pip install -r requirements.txt
 uvicorn app:app --host 0.0.0.0 --port 8000
 
 ## API Reference
-
-Authentication is enforced via headers. Include the following in all requests:
-X-API-Key: sk-biomaster-prod-2026
+ Authentication is enforced via headers. The API requires a valid API key provided through the request headers.
 
 GET /drug_screening_results
 Returns the structured results of the Lipinski's Rule of Five evaluations directly from the database.
